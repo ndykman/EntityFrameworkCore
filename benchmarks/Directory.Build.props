@@ -1,0 +1,25 @@
+<Project>
+  <Import Project="..\Directory.Build.props" />
+
+  <PropertyGroup>
+    <!--
+      Disables build warning/errors about PackageReference items that have versions, even though lineups are in use.
+      This is required because the benchmark projects test the last RTM release of EF and EF Core for comparison with
+      the current build of EF Core.
+    -->
+    <DisablePackageReferenceVersionRestrictions>true</DisablePackageReferenceVersionRestrictions>
+
+    <BenchmarkDotNetVersion>0.10.9</BenchmarkDotNetVersion>
+    <!-- The benchmarks projects use xunit.assert. -->
+    <XunitAssertVersion>2.2.0</XunitAssertVersion>
+  </PropertyGroup>
+
+  <!-- Following package versions must match with what is available on NuGet -->
+  <PropertyGroup>
+    <EF6Version>6.1.3</EF6Version>
+    <EFCore1Version>1.1.2</EFCore1Version>
+    <EFCore1SqlClientVersion>4.3.1</EFCore1SqlClientVersion>
+    <EFCore2Version>2.0.0</EFCore2Version>
+    <EFCore2SqlClientVersion>4.4.0</EFCore2SqlClientVersion>
+  </PropertyGroup>
+</Project>

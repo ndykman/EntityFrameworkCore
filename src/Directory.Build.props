@@ -1,7 +1,11 @@
 ﻿<Project>
   <Import Project="..\Directory.Build.props" />
 
+  <PropertyGroup>
+    <StyleCopAnalyzersVersion>1.0.0</StyleCopAnalyzersVersion>
+  </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="Internal.AspNetCore.Sdk" Version="$(InternalAspNetCoreSdkVersion)" PrivateAssets="All" />
+    <PackageReference Include="Internal.AspNetCore.Sdk" PrivateAssets="All" />
   </ItemGroup>
 </Project>

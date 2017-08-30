@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="$(EF6Version)" />
-    <PackageReference Include="xunit.assert" Version="$(XunitVersion)" />
+    <PackageReference Include="xunit.assert" Version="$(XunitAssertVersion)" />
   </ItemGroup>
 
 </Project>
